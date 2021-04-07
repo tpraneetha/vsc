@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Post</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="stylesheet/style1.css">
+</head>
+<body>
+    <div class="blog-container">
+
+    <!-- back link -->
+    <div class="back-screen">
+        <a href="Main_page.html">Back to blog</a>
+    </div>
+    <!-- end of back link -->
+    <!-- main part -->
+    <section class="main-part">
+        <h1 class="main-title">Blog title</h1>
+        <div class="author-content">
+            <img src="images/profile.jpg" class="author-image">
+            <div class="author-info">
+                
+            <h3 class="author-name ">Author name</h3>
+            <h3 class="author-description ">author description...</h3>
+            
+        </div>
+        
+        </div>
+    </section>
+    <!-- end of main part -->
+    <!-- main para -->
+    <section class="main-para">
+        <p class="para">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt adipisci cupiditate quo blanditiis voluptas laudantium odit, beatae, rerum dolores impedit nemo aut? Magnam earum iure non est, enim explicabo perspiciatis?</p>
+    <p class="line-para">Lorem ipsum, dolor s</p>
+
+        </div>
+    </section>
+<!-- end of main para -->
+<!-- banner -->
+<section class="banner">
+<div class="banner-content">
+<img src="images/computer.jpg" class="banner-img">
+<p class="banner-para">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam adipisci repellendus necessitatibus, placeat sit consequuntur ratione assumenda nulla optio quaerat a doloribus, maxime</p>
+</div>
+</section> 
+<!-- end of banner-->
+<section class="second-para">
+    <p class="para2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt adipisci cupiditate quo blanditiis voluptas laudantium odit, beatae, rerum dolores impedit nemo aut? Magnam earum iure non est, enim explicabo perspiciatis?</p>
+<p class="line-para2">Lorem ipsum, dolor s</p>
+
+    </div>
+</section>
+</div>
+</body>
+</html>
+
+
+
+
+css file:
+/* back link */
+.blog-container{
+    display: grid;
+    grid-template-columns: 
+    repeat(5,minmax(min-content,16rem)) ;
+    grid-template-rows: repeat(4,min-content)
+    60vh repeat(3,min-content);
+    grid-row-gap:1.6rem;
+    margin-top:1.6rem;
+}
+.back-screen{
+    grid-column:1/2;
+    grid-row: 1/2;
+    padding: 3rem;
+    font-size: 1.6rem;
+    color:blue;
+    text-decoration: none;
+    margin-top:3rem;
+    left:3rem;
+    transform: color .1s;
+    cursor: pointer;
+}
+.back-screen:hover{
+    color:rgb(31, 39, 34);
+}
+/* end of back link */
+/* Main part */
+.main-part{
+    grid-column: 1/5;
+    grid-row:2/4;
+}
+.main-title{
+    grid-column: 1/-1;
+    grid-row: 2/3;
+    padding:3rem;
+    left:3rem;
+    font-size: 6rem;
+    white-space: no-wrap;
+}
+.author-image{
+    grid-column: 1/2;
+    grid-row:3/4;
+    width:10vw;
+    height:10vh;
+    object-fit: cover;
+}
+.author-info{
+    grid-column: 2/5;
+    grid-row:3/4;
+
+     display:grid;
+    grid-template-columns: repeat(2,minmax(5rem,1fr));
+    grid-template-rows: repeat(2,min-content);
+} 
+
+.author-name{
+    font-size:1.3rem;
+    grid-column: 2/3;
+    grid-row: 1/2;
+    padding:0;
+    margin-bottom :0;
+    margin-left: 1rem; 
+    
+}
+.author-description{
+    font-size:1.3rem;
+    grid-column: 2/3;
+    grid-row: 2/3;
+    padding:0;
+    margin-top:0;
+    margin-left: .1rem;
+    margin-bottom: 0;
+}
+/* end of main part */
+/* main para */
+.main-para{
+    grid-column: 1/-1;
+    grid-row:4/5;
+    margin-left:3rem;
+}
+.para{
+    margin-top:0;
+    font-size:1.6rem;
+}
+.line-para{
+    grid-column: 1/-1;
+    grid-row:4/5;
+    height:2rem;
+    padding-left: .3rem;;
+    border-left-style: solid;
+    border-left-color:rgb(11, 11, 12);
+    
+}
+/* end of main para */
+/* banner */
+.banner{
+    grid-column: 1/5;
+    grid-row:5/7;
+}
+.banner-content{
+    grid-column: 1/5;
+    grid-row:5/7;
+    width:100%;
+    object-fit: cover;
+    height:60vh;
+}
+.banner-img{
+    width:100%;
+    object-fit: cover;
+    /* height:60vh; */
+}
+.banner-para{
+    grid-column: 1/5;
+    grid-row:6/7;
+    margin-top:0;
+    font-size:1.6rem;
+}
+p{
+    grid-column: 1/5;
+    grid-row:7/8;
+}
+/* end of banner */
+.second-para{
+    grid-column: 1/-1;
+    grid-row:6/7;
+    margin-left:3rem;
+}
+.para2{
+    margin-top:0;
+    font-size:1.6rem;
+}
+.line-para2{
+    grid-column: 1/-1;
+    grid-row:7/8;
+    height:2rem;
+    padding-left: .3rem;;
+    border-left-style: solid;
+    border-left-color:rgb(11, 11, 12);
+    
+}
